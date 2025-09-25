@@ -256,36 +256,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add CSS for ripple effect and mouse trail
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes ripple {
-        to {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
-    
-    .nav-link.active::after {
-        width: 100%;
-    }
-    
-    .mouse-trail {
-        position: fixed;
-        width: 6px;
-        height: 6px;
-        background: radial-gradient(circle, #4ecdc4, transparent);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        transition: opacity 0.3s ease;
-    }
-    
-    @media (max-width: 768px) {
-        .mouse-trail {
-            display: none;
-        }
-    }
-`;
+
 document.head.appendChild(style);
