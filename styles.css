@@ -292,12 +292,20 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    overflow: hidden;
     background: linear-gradient(135deg, #282b30 0%, #1e2124 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.member-avatar img {
+    width: 100%;       /* Image takes up 100% of the 120px width */
+    height: 100%;      /* Image takes up 100% of the 120px height */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-radius: 50%; /* Just to be safe, but overflow: hidden is the key */
 }
 
 .avatar-placeholder {
